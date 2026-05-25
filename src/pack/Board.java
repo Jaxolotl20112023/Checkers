@@ -68,7 +68,7 @@ public class Board {
 
 		
 		check_king();
-		System.out.println(new_x+","+new_y); 
+//		System.out.println(new_x+","+new_y); 
 		
 		return valid_move();
 	}
@@ -172,12 +172,12 @@ public class Board {
 			
 			
 			if (direction.contains("c")) {
-				System.out.println("opponent: " + opponent); 
+//				System.out.println("opponent: " + opponent); 
 				white_captures = opponent == "b" ? white_captures+=1 : white_captures;
 				black_captures = opponent == "w" ? black_captures+=1 : black_captures; 
 				
-				System.out.println("White captures: " + white_captures); 
-				System.out.println("Black captures: " + black_captures);
+//				System.out.println("White captures: " + white_captures); 
+//				System.out.println("Black captures: " + black_captures);
 				
 				if (white_captures == 12) {
 					System.out.println("White Wins!");
@@ -197,7 +197,6 @@ public class Board {
 
 			
 		} else {
-			System.out.println("Invalid Move Capture!"); 
 			return false; 
 		}
 		return true;
@@ -212,7 +211,7 @@ public class Board {
 			
 			assign_movement(move_set[i]); 
 			
-			System.out.println(move_set[i]+ " : "+new_x+","+new_y); 
+//			System.out.println(move_set[i]+ " : "+new_x+","+new_y); 
 			
 			try {
 				
@@ -220,7 +219,7 @@ public class Board {
 				new_x = !valid_move() ? old_x :new_x; 
 				
 			} catch (Exception e) {
-				System.out.println("Invalid"); 
+//				System.out.println("Invalid"); 
 			}
 			
 		}
